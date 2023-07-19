@@ -1,0 +1,22 @@
+.masthead {
+    padding-top: 40rem;
+    background-image: linear-gradient(to bottom, rgba(92, 77, 66, 0.05) 40%, rgba(244, 98, 58, 1) 100%), url("../public/HarpDude.JPG");
+    aspect-ratio: 6000/4000;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.message {
+    font-size: 65px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+
+}

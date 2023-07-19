@@ -33,3 +33,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# extra photos
+/wipItems
+
+# matter.js test
+/components/Matter.tsx

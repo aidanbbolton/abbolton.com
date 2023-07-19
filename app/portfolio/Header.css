@@ -1,0 +1,36 @@
+.NavBarEnd {
+    display: flex;
+    font-size: 26px;
+    flex-direction: row;
+    justify-content: flex-end;
+    /* background-color: lawngreen; */
+}
+
+.NavBarSym {
+    display: flex;
+    font-size: 26px;
+    flex-direction: row;
+    justify-content: flex-start;
+    /* background-color: beige; */
+
+}
+
+.NavContainer {
+    display: flex;
+    font-size: 26px;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    transition: background-color 0.5s ease;
+    min-width: 100vw;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.NavItem:hover {
+    color: #f4623a;
+    cursor: pointer;
+}
+
+
