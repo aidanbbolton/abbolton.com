@@ -54,7 +54,7 @@ export default function Links() {
                             <div className='link-text'>{windWidth ? 'LinkedIn' : ''}</div>
                         </div>
                     </a>
-                    <a className='link-group'>
+                    <a className='link-group' href='photography'>
                         <CameraFill size={36} className='link-icon'/>
                         <div className='link-text-container'>
                             <div className='link-text'>{windWidth ? 'Photography' : ''}</div>

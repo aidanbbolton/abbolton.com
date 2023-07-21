@@ -1,37 +1,54 @@
 import './PortBody.css'
-import { Merriweather } from 'next/font/google'
+import { Merriweather_Sans } from 'next/font/google'
 import Image from 'next/image'
+import { useState } from 'react'
 
-const merri = Merriweather({
+const merri = Merriweather_Sans({
     subsets: ['latin'],
     weight: '400'
 })
 
 type project = {
-    name: string;
+    title: string;
+    body:string;
     path: string;
+    hover_path: string;
     reverse: boolean;
+    url: string;
 }
 
 type Props = {}
 
 function Project(props: project) {
-    const altText = `${props.name} logo`
+
+    const altText = `${props.title} logo`
+    const [ hover, setHover ] = useState(false);
+
     return(
-        <div className={props.reverse ? 'reverse project' : 'project'}>
+        <a className={props.reverse ? 'reverse project outline' : 'project outline'} 
+           href={props.url} 
+           onMouseEnter={() => {
+            setHover(true);
+          }} 
+           onMouseLeave={() => {
+            setHover(false);
+          }}>
             <Image 
-                src={props.path}
+                src={ hover ? props.hover_path : props.path}
                 alt={altText}
                 width={500}
                 height={500}
+                className='image'
             />
             <div className='project-spacer'/>
             <h3 className='project-text'>
-                {props.name}
+                <div className='project-text-title'>{props.title}</div>
+                <div className='project-text-body'>{props.body}</div>
             </h3>
-        </div> 
+        </a> 
     )
 }
+
 
 
 export default function PortBody() {
@@ -40,13 +57,18 @@ export default function PortBody() {
 
         <header className='portbody-section'>
             <div className='project-section'>
-                {/* <Project path='./thumbnails/mitm.jpg' name='test project' reverse={true}/>a */}
-                <Project path='./thumbnails/mitm.svg' name='I am a <b>Data Scientist</b> looking to apply my knowledge of ML Models. I specialize in working with <b>Large Language Models</b>, <b>Fullstack Development</b>,
-                            and <b>Data Exploration</b>. I am passionate about finding inovative solutions to problems. My hobbies include <b>Reading</b>, <b>Photography</b>, and <b>Game Design</b>.' reverse={true}/>
+
+                <Project path='./thumbnails/mitm.svg' hover_path='./thumbnails/mitm_overlay.svg'
+                         title='MITM Attack' body="Demonstrates how a Man-in-the-Middle attack could be performed using ARP cache poisoning." 
+                         reverse={true} url='https://github.com/aidanbbolton/MITM-Attack'/>
                 <div className='project-section-spacer'/>
-                <Project path='./thumbnails/mitm.svg' name='test project' reverse={false}/>
+                <Project path='/thumbnails/informed1.png' hover_path='/thumbnails/informed_overlay.png'
+                         title='Informed Leaders 3-D Model' body='Model of effect informed leaders have on uninformed groups of individuals. Created with OpenGL.' 
+                         reverse={false} url='https://github.com/aidanbbolton/InformedLeaders'/>
                 <div className='project-section-spacer'/>
-                <Project path='./thumbnails/augmented.svg' name='test project' reverse={true}/>
+                <Project path='./thumbnails/augmented.svg' hover_path='./thumbnails/augmented_overlay.svg'
+                         title='AR Maintenance App' body='Full-stack application to record AR maintenance pins for inspection. Maintenace workers can sort and see active pins with automatic analysis provided.' 
+                         reverse={true} url='https://github.com/harinishritp1/augmented_sapiens'/>
             </div>
         </header>
 
