@@ -8,7 +8,7 @@ import Skills from '@/components/Skills'
 import Links from '@/components/Links'
 import Contact from '@/components/Contact'
 import Head from 'next/head';
-// import Comp from '@/components/Matter'
+import { Analytics } from '@vercel/analytics/react';
 
 const merri_sans = Merriweather_Sans({
   subsets: ['latin'],
@@ -56,6 +56,8 @@ export default function Home() {
       <section id='contact' className='snap-end'>
         <Contact/>
       </section>
+
+      <Analytics/>
       
       
     </div>
