@@ -16,16 +16,10 @@ const merri_sans = Merriweather_Sans({
 })
 
 export default function Home() {
-  const names = ['Ada Lovelace', 'Grace Hopper', 'Margaret Hamilton', 'List 1', 'List 2', '3', '4', '5'];
-  const [likes, setLikes] = useState(0);
-
-  function handleClick() {
-    setLikes(likes + 1);
-  }
 
   return (
 
-    <div className={merri_sans.className + " scroll-smooth"}>
+    <div className={merri_sans.className + " scroll-smooth text-white"}>
       
       <Head>
         <title>abbolton</title>

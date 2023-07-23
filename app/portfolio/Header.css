@@ -3,6 +3,8 @@
     font-size: 26px;
     flex-direction: row;
     justify-content: flex-end;
+    margin-top: 1.5vh;
+    margin-right: 3vw;
     /* background-color: lawngreen; */
 }
 
@@ -11,6 +13,8 @@
     font-size: 26px;
     flex-direction: row;
     justify-content: flex-start;
+    margin-top: 1.5vh;
+    margin-left: 3vh;
     /* background-color: beige; */
 
 }
@@ -26,6 +30,7 @@
     top: 0;
     left: 0;
     z-index: 1;
+    height: 4rem;
 }
 
 .NavItem:hover {

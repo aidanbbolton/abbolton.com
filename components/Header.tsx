@@ -26,13 +26,14 @@ export default function Header() {
 
     return (
         <div onScroll={changeNavBg}>
-                <div className={navBg ? 'NavContainer space-x-[15px] md:py-2 md:px-10 bg-white text-black' : 'NavContainer space-x-[31px] md:py-2 md:px-10 bg-transparent' }>
-                    <div className= 'NavBarSym items-center space-x-[31px] 2xl:space-x-10 pr-3 2xl:pr-8 md:py-2 2xl:py-5 md:px-10'>
+                <div className={navBg ? 'NavContainer bg-white text-black' : 'NavContainer text-white bg-transparent' }>
+                    <div className= 'NavBarSym'>
                         <Link to='welcome'smooth={true}>
                             <div className='NavItem'>{windWidth ? 'Aidan Bolton' : 'AB'}</div>
                         </Link>
                     </div>
-                    <div className= 'NavBarEnd items-center space-x-[31px] 2xl:space-x-10 pr-3 2xl:pr-8 md:py-2 2xl:py-5 md:px-10'>
+                    <div className='NavSpacer'></div>
+                    <div className= 'NavBarEnd'>
                         
                         <Link to='about' smooth={true}>
                             <div className='NavItem'>About</div>
