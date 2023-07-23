@@ -36,6 +36,10 @@
     transition: 0.5s;
 }
 
+.skinny {
+    flex-direction: column;
+}
+
 .reverse {
     flex-direction: row-reverse;
 }
@@ -59,14 +63,10 @@
 
 .project-spacer {
     min-width: 3rem;
-    
+    min-height: 3rem;
     /* background-color: aqua; */
 }
 
 .image {
     position: inherit;
-}
-.image:hover {
-    /* background: linear-gradient( to bottom, rgba(244, 98, 255, 1) 80%, rgba(244, 98, 58, 1) 80%);
-    transition: 1s; */
 }

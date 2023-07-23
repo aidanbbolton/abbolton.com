@@ -38,11 +38,11 @@ export default function Header() {
                         <Link to='about' smooth={true}>
                             <div className='NavItem'>About</div>
                         </Link>
-
+                        <div className='NavSpacer'></div>
                         <Link to='skills' smooth={true}>
                             <div className='NavItem'>Skills</div>
                         </Link>
-
+                        <div className='NavSpacer'></div>
                         <Link to='links' smooth={true}>
                             <div className='NavItem'>Links</div>
                         </Link>
